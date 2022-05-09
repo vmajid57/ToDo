@@ -8,21 +8,21 @@ class Task(models.Model):
     tag_id = models.IntegerField()
     name = models. CharField(max_length = 255)
     description = models.CharField(max_length = 500)
-    duedate = models.DataField()
+    duedate = models.DateField()
     priority_list = (
-    ( L , 'Low'),
-    ( M , 'Middel'),
-    ( H , 'High'),
+    ( 'L' , 'Low'),
+    ( 'M' , 'Middel'),
+    ( 'H' , 'High'),
     )
     pariority = models.CharField (
         max_length = 1,
-        choices = pariority_list,
-        default =  M,
+        choices = priority_list,
+        default =  'M',
         )
-    completed_at = models.DataField()
-    Created_at =  models.DataField()
-    updated_at =  models.DataField()
-    deleted_at =  models.DataField()
+    completed_at = models.DateField()
+    Created_at =  models.DateField()
+    updated_at =  models.DateField()
+    deleted_at =  models.DateField()
 
 class Group(models.Model):
     """docstring for Group."""
@@ -30,18 +30,18 @@ class Group(models.Model):
     name =models. CharField(max_length = 255)
     description = models.CharField(max_length = 500)
     priority_list = (
-    ( L , 'Low'),
-    ( M , 'Middel'),
-    ( H , 'High'),
+    ( 'L' , 'Low'),
+    ( 'M' , 'Middel'),
+    ( 'H' , 'High'),
     )
     pariority = models.CharField (
         max_length = 1,
-        choices = pariority_list,
-        default =  M,
+        choices = priority_list,
+        default =  'M',
         )
-    Created_at =  models.DataField()
-    updated_at =  models.DataField()
-    deleted_at =  models.DataField()
+    Created_at =  models.DateField()
+    updated_at =  models.DateField()
+    deleted_at =  models.DateField()
 
 class Tag(models.Model):
     """docstring for Tag."""
