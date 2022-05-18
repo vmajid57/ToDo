@@ -4,14 +4,21 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <form action="/action_page.php">
+    <form action="{% url "task.views.newTask" %}">
+      method = "POST" >{% csrf_token %}
       <label for="tname">Task Name:</label><br>
       <input type="text" id="tname" name="tname" value=" "><br><br>
       <label for="tgname">Tag Name:</label><br>
       <input type="text" id="tgname" name="tgname" value=" "><br><br>
       <label for="gname">Group Name:</label><br>
       <input type="text" id="gname" name="gname" value=" "><br><br>
-      <input type="submit" value="Submit">
+      <!-- <input type="submit" value="Submit"> -->
+      <button style = "border:0px; background-color:#4285F4; margin-top:8%;
+         height:35px; width:80%;margin-left:19%;" type = "submit"
+         value = "Submit" >
+         <strong>Submit</strong>
+      </button>
+
     </form>
   </body>
 </html>
