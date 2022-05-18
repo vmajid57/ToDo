@@ -27,7 +27,7 @@ class Task(models.Model):
 class Group(models.Model):
     """docstring for Group."""
     _id = models.IntegerField(primary_key=True)
-    name =models. CharField(max_length = 255)
+    name = models. CharField(max_length = 255)
     description = models.CharField(max_length = 500)
     priority_list = (
     ( 'L' , 'Low'),
@@ -46,4 +46,4 @@ class Group(models.Model):
 class Tag(models.Model):
     """docstring for Tag."""
     _id = models.IntegerField(primary_key=True)
-    name =models. CharField(max_length = 255)
+    name = models. CharField(max_length = 255)
